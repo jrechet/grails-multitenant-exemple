@@ -43,9 +43,9 @@ class BookServiceSpec extends Specification {
     }
 
     @Rollback
-    def "shows that we can save a domain with @grails.gorm.services.Service if we are already in a transactional context"() {
+    def "shows that we can save a domain with a @grails.gorm.services.Service if we are already in a transactional context"() {
 
-        when: 'we do the same thing with a @grails.gorm.services.Service'
+        when: 'we save a domain with a @grails.gorm.services.Service'
         Book aBook = bookService.saveBook('a book')
 
         then: 'a domain is created'
