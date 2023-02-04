@@ -11,12 +11,12 @@ import javax.persistence.TransactionRequiredException
 
 @Integration
 @Stepwise
-class BookServiceSpec extends Specification {
+class TransactionalAnnotationSpec extends Specification {
 
     AnotherBookService anotherBookService
     BookService bookService
 
-    def "shows that no transaction is handled by the @Transactional annotation in SCHEMA multitenancy mode"() {
+    def "shows that no transaction is handled by the @Transactional annotation in SCHEMA multitenancy mode on a @Transactional service"() {
 
         when: 'we save a domain within a transaction'
         Book book = null
